@@ -4,7 +4,6 @@
 	if(isset($_POST['login'])){
 	    $uname = $_POST['uname'];
 	    $pwd = $_POST['psw'];
-	    var_dump($pwd);
 	    $sql = "SELECT * FROM tbl_user WHERE username = '$uname' and password = '$pwd'"; 
 	    $query = pg_query($conn,$sql);
 	    $login_check = pg_num_rows($query);
