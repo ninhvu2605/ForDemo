@@ -1,13 +1,21 @@
 <?php 
 	$conn_string = "host=ec2-23-21-229-200.compute-1.amazonaws.com port=5432 dbname=d45cnbrd3f2d7l user=qqhhlmrdigauql password=637e31a7084d8a47a567ba0f2fb9d51707920f4751f53b734bb438a6485f1395";
 	$conn = pg_connect($conn_string);
-	if($conn){
-		echo "Hello";
-	}
-	$result = pg_query($conn, "select * from tbl_user");
-	if ($result) {
-	  echo "ok";
-	}
+	if isset($_POST['login']){
+	    $uname = $_POST['uname'];
+	    $pwd = $_POST['pwd'];
+		
+	    $sql = "select * from tbl_user where username = '$uname' and password = '$pwd'"; 
+	    $query = pg_query($conn,$sql);
+	    $login_check = pg_num_rows($query);
+	    if($login_check > 0){ 
+		echo "Login Successfully";    
+	    }else{
+		echo "Invalid Details";
+	    }
+
+	  }
+	
 ?>
 <!DOCTYPE html>
 <html>
