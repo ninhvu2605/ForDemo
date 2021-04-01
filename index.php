@@ -5,7 +5,7 @@
 		echo "Hello";
 	}
 	$result = pg_query($conn, "select * from tbl_user");
-	if (!$result) {
-	  echo "An error occurred.\n";
+	if ($result) {
+	  echo "ok";
 	}
  ?>
