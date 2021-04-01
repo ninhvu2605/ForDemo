@@ -3,13 +3,18 @@
 	$conn = pg_connect($conn_string);
 	if(isset($_POST['login'])){
 	    $uname = $_POST['uname'];
-	    $pwd = $_POST['pwd'];
+	    $pwd = $_POST['psw'];
 	    var_dump($pwd);
 	    $sql = "SELECT * FROM tbl_user WHERE username = '$uname' and password = '$pwd'"; 
 	    $query = pg_query($conn,$sql);
 	    $login_check = pg_num_rows($query);
+	    if($login_check == 1){ 
+		echo "Login Successfully";    
+	    }else{
+		echo "Invalid Details";
+	    }
 	
-	  }
+	 }
 ?>
 <!DOCTYPE html>
 <html>
