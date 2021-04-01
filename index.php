@@ -8,7 +8,8 @@
 	    $query = pg_query($conn,$sql);
 	    $login_check = pg_num_rows($query);
 	    if($login_check == 1){ 
-		echo "Login Successfully";    
+		$_SESSION['user'] = $uname;
+        	header("Location: welcome.php");
 	    }else{
 		echo "Invalid Details";
 	    }
