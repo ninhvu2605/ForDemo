@@ -4,8 +4,7 @@
 	if isset($_POST['login']){
 	    $uname = $_POST['uname'];
 	    $pwd = $_POST['pwd'];
-		
-	    $sql = "select * from tbl_user where username = '$uname' and password = '$pwd'"; 
+	    $sql = "SELECT * FROM tbl_user WHERE username = '$uname' and password = '$pwd'"; 
 	    $query = pg_query($conn,$sql);
 	    $login_check = pg_num_rows($query);
 	    if($login_check > 0){ 
@@ -15,7 +14,6 @@
 	    }
 
 	  }
-	
 ?>
 <!DOCTYPE html>
 <html>
@@ -96,7 +94,7 @@
   }
 </style>
 <body>
-  <form action="action_page.php" method="post">
+  <form method="post">
     <div class="imgcontainer">
       <img src="img_avatar2.png" alt="Avatar" class="avatar">
     </div>
@@ -109,11 +107,6 @@
       <input type="password" placeholder="Enter Password" name="psw" required>
 
       <button name ="login" type="submit">Login</button>
-    </div>
-
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
     </div>
   </form>
 </body>
