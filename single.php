@@ -1,12 +1,9 @@
 <?php 
 	include('connect.php');
-	$id = "";
-	if(isset($_GET['id'])){
-		$id = $_GET['id']
-		$sql = "SELECT * FROM product WHERE product_id = $id";
-		$query = pg_query($conn,$sql);
-	}
- ?>
+	$id = $_GET['id'];
+	$sql = "SELECT * FROM product WHERE product_id = $id";
+	$query = pg_query($conn,$sql);
+?>
 <!DOCTYPE html>
 <html lang="zxx">
    <head>
