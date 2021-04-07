@@ -186,17 +186,6 @@
                            <li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
                         </ul>
                      </div>
-                     <div class="color-quality">
-                        <div class="color-quality-right">
-                           <h5>Size :</h5>
-                           <select id="country1" onchange="change_country(this.value)" class="frm-field required sect">
-                              <option value="null">2 Feet</option>
-                              <option value="null">3 Feet</option>
-                              <option value="null">4 Feet</option>
-                              <option value="null">5 Feet</option>
-                           </select>
-                        </div>
-                     </div>
                      <div class="occasional">
                         <h5>Types :</h5>
                         <div class="colr ert">
