@@ -3,7 +3,7 @@
 	$id = $_GET['id'];
 	$sql = "SELECT * FROM product WHERE product_id = $id";
 	$query = pg_query($conn,$sql);
-?>
+ ?>
 <!DOCTYPE html>
 <html lang="zxx">
    <head>
@@ -162,7 +162,7 @@
                         <div class="flexslider1">
                            <ul class="slides">
                               <li data-thumb="images/<?php echo $row['image']; ?>">
-                                 <div class="thumb-image"> <img src="images/f2.jpg" data-imagezoom="true" class="img-fluid" alt=" "> </div>
+                                 <div class="thumb-image"> <img src="images/<?php echo $row['image']; ?>" data-imagezoom="true" class="img-fluid" alt=" "> </div>
                               </li>
                            </ul>
                            <div class="clearfix"></div>
