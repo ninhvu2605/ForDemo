@@ -1,5 +1,11 @@
 <?php 
 	include('connect.php');
+	$id = "";
+	if(isset($_GET['id'])){
+		$id = $_GET['id']
+		$sql = "SELECT * FROM product WHERE product_id = $id";
+		$query = pg_query($conn,$sql);
+	}
  ?>
 <!DOCTYPE html>
 <html lang="zxx">
@@ -139,7 +145,7 @@
          <div class="inner_breadcrumb  ml-4">
             <ul class="short_ls">
                <li>
-                  <a href="index.html">Home</a>
+                  <a href="index.php">Home</a>
                   <span>/ /</span>
                </li>
                <li>Single Page</li>
@@ -153,11 +159,12 @@
          <div class="container">
             <div class="inner-sec-shop pt-lg-4 pt-3">
                <div class="row">
+               	<?php if($row = pg_fetch_array($query)){ ?>
                   <div class="col-lg-4 single-right-left ">
                      <div class="grid images_3_of_2">
                         <div class="flexslider1">
                            <ul class="slides">
-                              <li data-thumb="images/f2.jpg">
+                              <li data-thumb="images/<?php echo $row['image']; ?>">
                                  <div class="thumb-image"> <img src="images/f2.jpg" data-imagezoom="true" class="img-fluid" alt=" "> </div>
                               </li>
                            </ul>
@@ -166,9 +173,12 @@
                      </div>
                   </div>
                   <div class="col-lg-8 single-right-left simpleCart_shelfItem">
-                     <h3>Soft Teddy Bear (Brown)</h3>
-                     <p><span class="item_price">$650</span>
+                     <h3><?php echo $row['product_name']; ?></h3>
+                     <p><span class="item_price"><?php echo $row['price']; ?></span>
                         <del>$1,199</del>
+                     </p>
+                     <p>
+                      	<span class="item_price"><?php echo $row['supplier']; ?></span>
                      </p>
                      <div class="rating1">
                         <ul class="stars">
@@ -193,13 +203,13 @@
                      <div class="occasional">
                         <h5>Types :</h5>
                         <div class="colr ert">
-                           <label class="radio"><input type="radio" name="radio" checked=""><i></i> Soft Teddy Bear (Black)</label>
+                           <label class="radio"><input type="radio" name="radio" checked=""><i></i> <?php echo $row['product_name']; ?> (Black)</label>
                         </div>
                         <div class="colr">
-                           <label class="radio"><input type="radio" name="radio"><i></i>Soft Teddy Bear (Brown)</label>
+                           <label class="radio"><input type="radio" name="radio"><i></i><?php echo $row['product_name']; ?> (Brown)</label>
                         </div>
                         <div class="colr">
-                           <label class="radio"><input type="radio" name="radio"><i></i>Pink Teddy Bear (Pink)</label>
+                           <label class="radio"><input type="radio" name="radio"><i></i><?php echo $row['product_name']; ?> (Pink)</label>
                         </div>
                         <div class="clearfix"> </div>
                      </div>
@@ -239,24 +249,15 @@
                         <ul class="resp-tabs-list">
                            <li>Description</li>
                            <li>Reviews</li>
-                           <li>Information</li>
                         </ul>
                         <div class="resp-tabs-container">
                            <!--/tab_one-->
                            <div class="tab1">
                               <div class="single_page">
-                                 <h6>Lorem ipsum dolor sit amet</h6>
-                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elPellentesque vehicula augue eget nisl ullamcorper, molestie
-                                    blandit ipsum auctor. Mauris volutpat augue dolor.Consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                                    ut lab ore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. labore et dolore
-                                    magna aliqua.
+                                 <p>
+
                                  </p>
-                                 <p class="para">Lorem ipsum dolor sit amet, consectetur adipisicing elPellentesque vehicula augue eget nisl ullamcorper, molestie
-                                    blandit ipsum auctor. Mauris volutpat augue dolor.Consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                                    ut lab ore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. labore et dolore
-                                    magna aliqua.
-                                 </p>
-                              </div>
+                                </div>
                            </div>
                            <!--//tab_one-->
                            <div class="tab2">
@@ -271,50 +272,20 @@
                                              <li><a href="#">Admin</a></li>
                                              <li><a href="#"><i class="fa fa-reply-all" aria-hidden="true"></i> Reply</a></li>
                                           </ul>
-                                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elPellentesque vehicula augue eget.Ut enim ad minima veniam,
-                                             quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis
-                                             autem vel eum iure reprehenderit.
+                                          <p>
+                                          	<?php echo $row['product_name']; ?>
                                           </p>
                                        </div>
                                        <div class="clearfix"> </div>
                                     </div>
-                                    <div class="add-review">
-                                       <h4>add a review</h4>
-                                       <form action="#" method="post">
-                                          <div class="row">
-                                             <div class="col-md-6">
-                                                <input type="text" name="Name" required="">
-                                             </div>
-                                             <div class="col-md-6">
-                                                <input type="email" name="Email" required="">
-                                             </div>
-                                          </div>
-                                          <textarea name="Message" required=""></textarea>
-                                          <input type="submit" value="SEND">
-                                       </form>
-                                    </div>
                                  </div>
-                              </div>
-                           </div>
-                           <div class="tab3">
-                              <div class="single_page">
-                                 <h6>Teddy Bear(Blue)</h6>
-                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elPellentesque vehicula augue eget nisl ullamcorper, molestie
-                                    blandit ipsum auctor. Mauris volutpat augue dolor.Consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                                    ut lab ore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. labore et dolore
-                                    magna aliqua.
-                                 </p>
-                                 <p class="para">Lorem ipsum dolor sit amet, consectetur adipisicing elPellentesque vehicula augue eget nisl ullamcorper, molestie
-                                    blandit ipsum auctor. Mauris volutpat augue dolor.Consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                                    ut lab ore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. labore et dolore
-                                    magna aliqua.
-                                 </p>
                               </div>
                            </div>
                         </div>
                      </div>
                   </div>
                   <!--//tabs-->
+                 <?php } ?>
                </div>
             </div>
          </div>
