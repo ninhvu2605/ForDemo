@@ -220,18 +220,7 @@
                                           </li>
                                        </ul>
                                     </div>
-                                    <div class="toys single-item hvr-outline-out">
-                                       <form action="#" method="post">
-                                          <input type="hidden" name="cmd" value="_cart">
-                                          <input type="hidden" name="add" value="1">
-                                          <input type="hidden" name="toys_item" value="toys(barbie)">
-                                          <input type="hidden" name="amount" value="575.00">
-                                          <button type="submit" class="toys-cart ptoys-cart">
-                                          <i class="fas fa-cart-plus"></i>
-                                          </button>
-                                       </form>
-                                    </div>
-                                 </div>
+                                   </div>
                                  <div class="clearfix"></div>
                               </div>
                            </div>
