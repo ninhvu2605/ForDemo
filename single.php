@@ -160,12 +160,6 @@
                               <li data-thumb="images/f2.jpg">
                                  <div class="thumb-image"> <img src="images/f2.jpg" data-imagezoom="true" class="img-fluid" alt=" "> </div>
                               </li>
-                              <li data-thumb="images/f1.jpg">
-                                 <div class="thumb-image"> <img src="images/f1.jpg" data-imagezoom="true" class="img-fluid" alt=" "> </div>
-                              </li>
-                              <li data-thumb="images/f3.jpg">
-                                 <div class="thumb-image"> <img src="images/f3.jpg" data-imagezoom="true" class="img-fluid" alt=" "> </div>
-                              </li>
                            </ul>
                            <div class="clearfix"></div>
                         </div>
@@ -184,13 +178,6 @@
                            <li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
                            <li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
                         </ul>
-                     </div>
-                     <div class="description">
-                        <h5>Check delivery, payment options and charges at your location</h5>
-                        <form action="#" method="post">
-                           <input class="form-control" type="text" name="Email" placeholder="Please enter..." required="">
-                           <input type="submit" value="Check">
-                        </form>
                      </div>
                      <div class="color-quality">
                         <div class="color-quality-right">
@@ -216,21 +203,8 @@
                         </div>
                         <div class="clearfix"> </div>
                      </div>
-                     <div class="occasion-cart">
-                        <div class="toys single-item singlepage">
-                           <form action="#" method="post">
-                              <input type="hidden" name="cmd" value="_cart">
-                              <input type="hidden" name="add" value="1">
-                              <input type="hidden" name="toys_item" value="Farenheit">
-                              <input type="hidden" name="amount" value="575.00">
-                              <button type="submit" class="toys-cart ptoys-cart add">
-                              Add to Cart
-                              </button>
-                           </form>
-                        </div>
-                     </div>
                      <ul class="footer-social text-left mt-lg-4 mt-3">
-                        <li>Share On : </li>
+                        <li>Share On: </li>
                         <li class="mx-1">
                            <a href="#">
                            <span class="fab fa-facebook-f"></span>
