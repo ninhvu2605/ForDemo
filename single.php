@@ -1,9 +1,6 @@
-<!--A Design by W3layouts
-   Author: W3layout
-   Author URL: http://w3layouts.com
-   License: Creative Commons Attribution 3.0 Unported
-   License URL: http://creativecommons.org/licenses/by/3.0/
-   -->
+<?php 
+	include('connect.php');
+ ?>
 <!DOCTYPE html>
 <html lang="zxx">
    <head>
@@ -29,12 +26,13 @@
       <!-- font-awesome icons -->
       <link href="css/fontawesome-all.min.css" rel="stylesheet" type="text/css" media="all">
       <!-- //font-awesome icons -->
+      <!-- For Clients slider -->
+      <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="all" />
+      <!--flexs slider-->
+      <link href="css/JiSlider.css" rel="stylesheet">
       <!--Shoping cart-->
       <link rel="stylesheet" href="css/shop.css" type="text/css" />
       <!--//Shoping cart-->
-      <link rel="stylesheet" type="text/css" href="css/jquery-ui1.css">
-      <link href="css/easy-responsive-tabs.css" rel='stylesheet' type='text/css' />
-      <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
       <!--stylesheets-->
       <link href="css/style.css" rel='stylesheet' type='text/css' media="all">
       <!--//stylesheets-->
@@ -42,29 +40,28 @@
       <link href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
    </head>
    <body>
-      <!--headder-->
       <div class="header-outs" id="home">
-      <div class="header-bar">
-         <div class="info-top-grid">
-            <div class="info-contact-agile">
-               <ul>
-                  <li>
-                     <span class="fas fa-phone-volume"></span>
-                     <p>+(000)123 4565 32</p>
-                  </li>
-                  <li>
-                     <span class="fas fa-envelope"></span>
-                     <p><a href="mailto:info@example.com">info@example1.com</a></p>
-                  </li>
-                  <li>
-                  </li>
-               </ul>
+         <div class="header-bar">
+            <div class="info-top-grid">
+               <div class="info-contact-agile">
+                  <ul>
+                     <li>
+                        <span class="fas fa-phone-volume"></span>
+                        <p>+(000)123 4565 32</p>
+                     </li>
+                     <li>
+                        <span class="fas fa-envelope"></span>
+                        <p><a href="mailto:info@example.com">info@example1.com</a></p>
+                     </li>
+                     <li>
+                     </li>
+                  </ul>
+               </div>
             </div>
-         </div>
             <div class="container-fluid">
                <div class="hedder-up row">
                   <div class="col-lg-3 col-md-3 logo-head">
-                     <h1><a class="navbar-brand" href="index.html">Toys-Shop</a></h1>
+                     <h1><a class="navbar-brand" href="index.php">Toys-Shop</a></h1>
                   </div>
                   <div class="col-lg-5 col-md-6 search-right">
                      <form class="form-inline my-lg-0">
@@ -95,52 +92,43 @@
                   </div>
                </div>
             </div>
-         <nav class="navbar navbar-expand-lg navbar-light">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-               <ul class="navbar-nav ">
-                  <li class="nav-item ">
-                     <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item">
-                     <a href="about.html" class="nav-link">About</a>
-                  </li>
-                  <li class="nav-item">
-                     <a href="service.html" class="nav-link">Service</a>
-                  </li>
-                  <li class="nav-item active">
-                     <a href="shop.html" class="nav-link">Shop Now</a>
-                  </li>
-                 <li class="nav-item dropdown">
-                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                     Pages
-                     </a>
-                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="nav-link" href="icon.html">404 Page</a>
-                        <a class="nav-link " href="typography.html">Typography</a>
-                     </div>
-                  </li>
-                  <li class="nav-item dropdown">
-                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                     Product
-                     </a>
-                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="nav-link" href="product.html">Kids Toys</a>
-                        <a class="nav-link " href="product.html">Dolls</a>
-                        <a class="nav-link " href="product.html">Key Toys</a>
-                        <a class="nav-link " href="product.html">Boys Toys</a>
-                     </div>
-					 </li>
-                  <li class="nav-item">
-                     <a href="contact.html" class="nav-link">Contact</a>
-                  </li>
-               </ul>
-            </div>
-         </nav>
-      </div>
-	  </div>
+            <nav class="navbar navbar-expand-lg navbar-light">
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                  <ul class="navbar-nav ">
+                     <li class="nav-item active">
+                        <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+                     </li>
+                     <li class="nav-item">
+                        <a href="about.html" class="nav-link">About</a>
+                     </li>
+                     <li class="nav-item">
+                        <a href="service.html" class="nav-link">Service</a>
+                     </li>
+                     <li class="nav-item">
+                        <a href="shop.php" class="nav-link">Shop Now</a>
+                     </li>
+                     <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Product
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                           <a class="nav-link" href="product.html">Kids Toys</a>
+                           <a class="nav-link " href="product.html">Dolls</a>
+                           <a class="nav-link " href="product.html">Key Toys</a>
+                           <a class="nav-link " href="product.html">Boys Toys</a>
+                        </div>
+                     </li>
+                     <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact</a>
+                     </li>
+                  </ul>
+               </div>
+            </nav>
+         </div>
+	</div>
       <!--//headder-->
       <!-- banner -->
       <div class="inner_page-banner one-img">
