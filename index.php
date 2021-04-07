@@ -1,3 +1,9 @@
+<!--A Design by W3layouts
+   Author: W3layout
+   Author URL: http://w3layouts.com
+   License: Creative Commons Attribution 3.0 Unported
+   License URL: http://creativecommons.org/licenses/by/3.0/
+   -->
 <!DOCTYPE html>
 <html lang="zxx">
    <head>
@@ -58,7 +64,7 @@
             <div class="container-fluid">
                <div class="hedder-up row">
                   <div class="col-lg-3 col-md-3 logo-head">
-                     <h1><a class="navbar-brand" href="index.html">Toys-Shop</a></h1>
+                     <h1><a class="navbar-brand" href="index.php">Toys-Shop</a></h1>
                   </div>
                   <div class="col-lg-5 col-md-6 search-right">
                      <form class="form-inline my-lg-0">
@@ -96,7 +102,7 @@
                <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
                   <ul class="navbar-nav ">
                      <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
                      </li>
                      <li class="nav-item">
                         <a href="about.html" class="nav-link">About</a>
@@ -105,16 +111,7 @@
                         <a href="service.html" class="nav-link">Service</a>
                      </li>
                      <li class="nav-item">
-                        <a href="shop.html" class="nav-link">Shop Now</a>
-                     </li>
-                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Pages
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                           <a class="nav-link" href="icon.html">404 Page</a>
-                           <a class="nav-link " href="typography.html">Typography</a>
-                        </div>
+                        <a href="shop.php" class="nav-link">Shop Now</a>
                      </li>
                      <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -256,7 +253,7 @@
                            <h4 class="pt-3">Soft Toys</h4>
                         </div>
                         <div class="outs_more-buttn">
-                           <a href="shop.html">Shop Now</a>
+                           <a href="shop.php">Shop Now</a>
                         </div>
                      </div>
                   </li>
@@ -267,7 +264,7 @@
                            <h4 class="pt-3">Soft Toys</h4>
                         </div>
                         <div class="outs_more-buttn">
-                           <a href="shop.html">Shop Now</a>
+                           <a href="shop.php">Shop Now</a>
                         </div>
                      </div>
                   </li>
@@ -278,7 +275,7 @@
                            <h4 class="pt-3">Soft Toys</h4>
                         </div>
                         <div class="outs_more-buttn">
-                           <a href="shop.html">Shop Now</a>
+                           <a href="shop.php">Shop Now</a>
                         </div>
                      </div>
                   </li>
@@ -289,7 +286,7 @@
                            <h4 class="pt-3">Soft Toys</h4>
                         </div>
                         <div class="outs_more-buttn">
-                           <a href="shop.html">Shop Now</a>
+                           <a href="shop.php">Shop Now</a>
                         </div>
                      </div>
                   </li>
@@ -300,7 +297,7 @@
                            <h4 class="pt-3">Soft Toys</h4>
                         </div>
                         <div class="outs_more-buttn">
-                           <a href="shop.html">Shop Now</a>
+                           <a href="shop.php">Shop Now</a>
                         </div>
                      </div>
                   </li>
@@ -311,7 +308,7 @@
                            <h4 class="pt-3">Soft Toys</h4>
                         </div>
                         <div class="outs_more-buttn">
-                           <a href="shop.html">Shop Now</a>
+                           <a href="shop.php">Shop Now</a>
                         </div>
                      </div>
                   </li>
@@ -496,7 +493,7 @@
                   velit sagittis vehicula. Duis posuere 
                </p>
                <div class="clients_more-buttn">
-                  <a href="shop.html">Shop Now</a>
+                  <a href="shop.php">Shop Now</a>
                </div>
             </div>
             <div class="row">
@@ -510,7 +507,7 @@
                         velit sagittis vehicula. Duis posuere 
                      </p>
                      <div class="clients_more-buttn">
-                        <a href="shop.html">Shop Now</a>
+                        <a href="shop.php">Shop Now</a>
                      </div>
                   </div>
                </div>
@@ -524,7 +521,7 @@
                         velit sagittis vehicula. Duis posuere 
                      </p>
                      <div class="clients_more-buttn">
-                        <a href="shop.html">Shop Now</a>
+                        <a href="shop.php">Shop Now</a>
                      </div>
                   </div>
                   <div class="toys-img-one-three">
@@ -536,7 +533,7 @@
                         velit sagittis vehicula. Duis posuere 
                      </p>
                      <div class="clients_more-buttn">
-                        <a href="shop.html">Shop Now</a>
+                        <a href="shop.php">Shop Now</a>
                      </div>
                   </div>
                </div>
@@ -560,7 +557,7 @@
                         velit sagittis vehicula. Duis posuere 
                      </p>
                      <div class="clients_more-buttn">
-                        <a href="shop.html" class="mb-0">Shop Now</a>
+                        <a href="shop.php" class="mb-0">Shop Now</a>
                      </div>
                   </div>
                </div>
@@ -576,7 +573,7 @@
                         velit sagittis vehicula. Duis posuere 
                      </p>
                      <div class="clients_more-buttn ">
-                        <a href="shop.html" class="mb-0">Shop Now</a>
+                        <a href="shop.php" class="mb-0">Shop Now</a>
                      </div>
                   </div>
                </div>
