@@ -158,9 +158,9 @@
                      <h3 class="agileits-sear-head">Search Here..</h3>
                      <form action="#" method="post">
                         <input type="search" placeholder="Product name..." name="search" required="">
-                        <input type="submit" value=" ">
+                        <input name = "search" type="submit" value=" ">
                      </form>
-                  </div>
+                  </div>	
                </div>
                <div class="left-ads-display col-lg-9">
                   <div class="row">
@@ -173,10 +173,10 @@
                         <div class="product-toys-info">
                            <div class="men-pro-item">
                               <div class="men-thumb-item">
-                                 <img src="images/<?php echo $row['image']; ?>" class="img-thumbnail img-fluid" alt="<?php echo $row['product_name']; ?>">
+                                 <img src="images/<?php echo $row['image']; ?>" class="img-thumbnail img-fluid" alt="">
                                  <div class="men-cart-pro">
                                     <div class="inner-men-cart-pro">
-                                       <a href="single.php?id=<?php echo $['product_id']; ?>" class="link-product-add-cart">Quick View</a>
+                                       <a href="single.php?id=<?php echo $row['product_id']; ?>" class="link-product-add-cart">Quick View</a>
                                     </div>
                                  </div>
                                  <span class="product-new-top">New</span>
@@ -186,10 +186,10 @@
                                     <div class="grid_meta">
                                        <div class="product_price">
                                           <h4>
-                                             <a href="single.php?id=<?php echo $['product_id']; ?>"><?php echo $['product_name']; ?></a>
+                                             <a href="single.php?id=<?php echo $row['product_id']; ?>"><?php echo $row['product_name']; ?></a>
                                           </h4>
                                           <div class="grid-price mt-2">
-                                             <span class="money "><?php echo $['price']; ?></span>
+                                             <span class="money "><?php echo $row['price']; ?></span>
                                           </div>
                                        </div>
                                        <ul class="stars">
@@ -220,6 +220,17 @@
                                           </li>
                                        </ul>
                                     </div>
+                                    <div class="toys single-item hvr-outline-out">
+                                       <form action="#" method="post">
+                                          <input type="hidden" name="cmd" value="_cart">
+                                          <input type="hidden" name="add" value="1">
+                                          <input type="hidden" name="toys_item" value="toys(barbie)">
+                                          <input type="hidden" name="amount" value="575.00">
+                                          <button type="submit" class="toys-cart ptoys-cart">
+                                          <i class="fas fa-cart-plus"></i>
+                                          </button>
+                                       </form>
+                                    </div>
                                  </div>
                                  <div class="clearfix"></div>
                               </div>
@@ -229,38 +240,6 @@
                      <?php 
                      	}
                       ?>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section>
-      <!-- //show Now-->
-      <!--subscribe-address-->
-      <section class="subscribe">
-         <div class="container-fluid">
-         <div class="row">
-            <div class="col-lg-6 col-md-6 map-info-right px-0">
-               <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3150859.767904157!2d-96.62081048651531!3d39.536794757966845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1408111832978"> </iframe>
-            </div>
-            <div class="col-lg-6 col-md-6 address-w3l-right text-center">
-               <div class="address-gried ">
-                  <span class="far fa-map"></span>
-                  <p>25478 Road St.121<br>USA New Hill
-                  <p>
-               </div>
-               <div class="address-gried mt-3">
-                  <span class="fas fa-phone-volume"></span>
-                  <p> +(000)123 4565<br>+(010)123 4565</p>
-               </div>
-               <div class=" address-gried mt-3">
-                  <span class="far fa-envelope"></span>
-                  <p><a href="mailto:info@example.com">info@example1.com</a>
-                     <br><a href="mailto:info@example.com">info@example2.com</a>
-                  </p>
-               </div>
-            </div>
-         </div>
-		 </div>
       </section>
       <!--//subscribe-address-->
       <section class="sub-below-address py-lg-4 py-md-3 py-sm-3 py-3">
