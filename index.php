@@ -1,5 +1,5 @@
 <?php 
-   include('header.php');
+   get_headers("header.php");
 ?>
          <!-- Slideshow 4 -->
          <div class="slider text-center">
