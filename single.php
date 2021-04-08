@@ -237,8 +237,7 @@
                         </ul>
                         <div class="resp-tabs-container">
                            <!--/tab_one-->
-                           <h2 class="resp-accordion resp-tab-active" role="tab" aria-controls="tab_item-0"><span class="resp-arrow"></span>Description</h2><div class="tab1 resp-tab-content resp-tab-content-active" style="display:block" aria-labelledby="tab_item-0">
-                              <div class="single_page">
+                             <div class="single_page">
                                  <h6>Lorem ipsum dolor sit amet</h6>
                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elPellentesque vehicula augue eget nisl ullamcorper, molestie
                                     blandit ipsum auctor. Mauris volutpat augue dolor.Consectetur adipisicing elit, sed do eiusmod tempor incididunt
