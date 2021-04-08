@@ -93,14 +93,14 @@
                         <a href="shop.php" class="nav-link">Shop Now</a>
                      </li>
                      <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Product
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 			   <?php 
-				$query = pg_query($conn, "SELECT * FROM CATEGORY");
-				While($row = pg_fetch_array($query)){
-				   echo "<a class='nav-link' href='product.html'>".$row['cat_name']."</a>";
+				$query1 = pg_query($conn,"SELECT * FROM CATEGORY");
+				while($row1 = pg_fetch_array($query)){
+				   echo "<a class='nav-link' href='product.html'>".$row1['cat_name']."</a>";
 				}
 			   ?>
                         </div>
