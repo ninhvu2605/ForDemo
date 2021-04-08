@@ -222,7 +222,7 @@
                   <div class="clearfix"> </div>
 		  <div class="toys single-item singlepage">
 		     <form action="cart.php" method="post">
-			  <input type="hidden" name="id" value="<?php echo $row1['product_id'] ?>">
+			  <input type="hidden" name="id" value="<?php echo $row1['product_id']; ?>">
 			  <label style="font-family: sans-serif; font-size: 18px; color:#EF7F9B;">Quantity:   </label>
 			  <input type="number" name="quantity" min="1">
                      	  <button class="top_toys_cart" type="submit" name="submit" value="">
