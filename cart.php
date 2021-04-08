@@ -1,19 +1,5 @@
 <?php 
-   session_start();
-   include('connect.php');
-   if(isset($_GET['del'])){
-      unset($_SESSION['cart'][$_GET['del']);
-      header('location:cart.php');
-   }
-   $totalAmount = 0;
-   $amountNew = null;
-   if($_SERVER['REQUEST_METHOD'] == 'POST'){
-     $id = $_REQUEST['product_id'];
-     $q = pg_query($conn, "SELECT * FROM product WHERE product_id = $id");
-     $product = pg_fetch_array($q);
-     $_SESSION['cart'][$id] = $product;
-     $_SESSION['cart'][$id]['quantity'] = $_SESSION['cart'][$id]['quantity'] + 1; 
-   }
+
  ?>
 <!DOCTYPE html>
 <html lang="zxx">
