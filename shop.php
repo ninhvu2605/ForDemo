@@ -210,7 +210,7 @@
                                        </ul>
                                     </div>
 				    <div class="toys single-item hvr-outline-out">
-					   <form action="singe.php?id=<?php echo $row['product_id']; ?>" method="post" class="last">
+					   <form action="single.php?id=<?php echo $row['product_id']; ?>" method="post" class="last">
 					      <button class="top_toys_cart" type="submit" name="submit">
 					      <span class="fas fa-cart-arrow-down"></span>
 					      </button>
