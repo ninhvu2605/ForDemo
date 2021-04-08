@@ -2,7 +2,7 @@
 ob_start(); // fix header();
 include('connect.php');
 
-var_dump($_SESSION['total_ammount']);
+var_dump($_SESSION['total_amount']);
 var_dump($_SESSION['cart']);
 
 if(isset($_POST['check-out'])){
