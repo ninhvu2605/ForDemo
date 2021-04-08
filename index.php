@@ -98,7 +98,7 @@
 			
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 			   <?php while($row){ ?>
-				<a class="nav-link" href="product.html"><?php echo $row['cat_name']; ?></a> 
+				<a class="nav-link" href="product.php"><?php echo $row['cat_name']; ?></a> 
 			   <?php } ?>
                         </div>
                      </li>
