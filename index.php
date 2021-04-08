@@ -1,7 +1,5 @@
 <?php 
 	include('connect.php');
-	$sql = "SELECT * FROM category";
-	$query = pg_query($conn,$sql);
  ?>
 <!DOCTYPE html>
 <html lang="zxx">
@@ -66,9 +64,15 @@
                      <h1><a class="navbar-brand" href="index.php">Toys-Shop</a></h1>
                   </div>
                   <div class="col-lg-5 col-md-6 search-right">
-                     <form class="form-inline my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search">
-                        <button class="btn" type="submit">Search</button>
+		     <?php
+			  if(isset($_POST['search_btn'])){
+		          	$s = $_POST['search_input']; 
+				header("Location:search.php?searchkey=$s");
+			  }
+		     ?>	  
+                     <form method="post" class="form-inline my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" name = "search_input">
+                        <button class="btn" type="submit" name ="search_btn">Search</button>
                      </form>
 		  </div>
                </div>
@@ -97,7 +101,11 @@
                         </a>
 			
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-			   <?php while($row = pg_fetch_array($query)){ ?>
+			   <?php
+				$sql = "SELECT * FROM category";
+				$query = pg_query($conn,$sql);
+				while($row = pg_fetch_array($query)){ 
+			   ?>
 				<a class="nav-link" href="product.php"><?php echo $row['cat_name']; ?></a> 
 			   <?php } ?>
                         </div>
