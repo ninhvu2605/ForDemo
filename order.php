@@ -3,9 +3,6 @@ ob_start(); // fix header();
 session_start();
 include('connect.php');
 
-var_dump($_SESSION['total_amount']);
-var_dump($_SESSION['cart']);
-
 if(isset($_POST['check-out'])){
 	$name = $_POST['name'];
 	$address = $_POST['address'];
