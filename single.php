@@ -232,9 +232,6 @@
                   <!--/tabs-->
 		  <div class="responsive_tabs">
                      <div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
-                        <ul class="resp-tabs-list">
-                           <li class="resp-tab-item resp-tab-active" aria-controls="tab_item-0" role="tab">Description</li>
-                        </ul>
                         <div class="resp-tabs-container">
                            <!--/tab_one-->
                              <div class="single_page">
