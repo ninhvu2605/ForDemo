@@ -215,7 +215,7 @@
         </tbody>
       </table>
 </div>
-
+<?php $_SESSION['total_amount'] = number_format($total,2); ?>
 
 
 
