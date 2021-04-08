@@ -103,7 +103,7 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                            <?php
                               $sql2 = "SELECT * FROM category";
-                              $query2 = pg_query($conn,$sql1);
+                              $query2 = pg_query($conn,$sql2);
                               while($row2 = pg_fetch_array($query2)){ 
                            ?>
                            <a class="nav-link" href="search.php?searchkey=<?php echo $row2['cat_name']; ?>"><?php echo $row2['cat_name']; ?></a> 
