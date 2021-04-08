@@ -1,9 +1,8 @@
-<!--A Design by W3layouts
-   Author: W3layout
-   Author URL: http://w3layouts.com
-   License: Creative Commons Attribution 3.0 Unported
-   License URL: http://creativecommons.org/licenses/by/3.0/
-   -->
+<?php 
+	include('connect.php');
+	$sql = "SELECT * FROM category";
+	$row = pg_fetch_array(pg_query($conn,$sql));
+ ?>
 <!DOCTYPE html>
 <html lang="zxx">
    <head>
@@ -96,13 +95,11 @@
                         <a class="nav-link dropdown-toggle" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Product
                         </a>
+			
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-			   <?php 
-				$query1 = pg_query($conn,"SELECT * FROM category");
-				while($row1 = pg_fetch_array($query)){
-				   echo "<a class='nav-link' href='product.html'>".$row1['cat_name']."</a>";
-				}
-			   ?>
+			   <?php while($row){ ?>
+				<a class="nav-link" href="product.html"><?php echo $row['cat_name']; ?></a> 
+			   <?php } ?>
                         </div>
                      </li>
                      <li class="nav-item">
