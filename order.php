@@ -1,5 +1,6 @@
 <?php 
 ob_start(); // fix header();
+session_start();
 include('connect.php');
 
 var_dump($_SESSION['total_amount']);
