@@ -220,6 +220,9 @@
                                           </li>
                                        </ul>
                                     </div>
+				    <div class="toys single-item hvr-outline-out">
+                                          <button type="submit" class="toys-cart ptoys-cart"><i class="fas fa-cart-plus"></i></button>
+                                   </div>
                                    </div>
                                  <div class="clearfix"></div>
                               </div>
