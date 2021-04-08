@@ -235,6 +235,7 @@
                         <div class="resp-tabs-container">
                            <!--/tab_one-->
                              <div class="single_page">
+				 <h3>Description</h3>
                                  <h6>Lorem ipsum dolor sit amet</h6>
                                  <p>
 					<?php echo $row['description']; ?>
