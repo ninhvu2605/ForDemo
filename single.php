@@ -146,14 +146,14 @@
 		       $id = $_GET['id'];
 		       $sql1 = "SELECT * FROM product WHERE product_id = $id";
 		       $query1 = pg_query($conn,$sql);
-		       if($row = pg_fetch_array($query1)){ 
+		       if($row1 = pg_fetch_array($query1)){ 
 		?>
                   <div class="col-lg-4 single-right-left ">
                      <div class="grid images_3_of_2">
                         <div class="flexslider1">
                            <ul class="slides">
-                              <li data-thumb="images/<?php echo $row['image']; ?>">
-                                 <div class="thumb-image"> <img src="images/<?php echo $row['image']; ?>" data-imagezoom="true" class="img-fluid" alt=" "> </div>
+                              <li data-thumb="images/<?php echo $row1['image']; ?>">
+                                 <div class="thumb-image"> <img src="images/<?php echo $row1['image']; ?>" data-imagezoom="true" class="img-fluid" alt=" "> </div>
                               </li>
                            </ul>
                            <div class="clearfix"></div>
@@ -161,12 +161,12 @@
                      </div>
                   </div>
                   <div class="col-lg-8 single-right-left simpleCart_shelfItem">
-                     <h3><?php echo $row['product_name']; ?></h3>
-                     <p><span class="item_price"><?php echo $row['price']; ?></span>
+                     <h3><?php echo $row1['product_name']; ?></h3>
+                     <p><span class="item_price"><?php echo $row1['price']; ?></span>
                         <del>$1,199</del>
                      </p>
                      <p>
-                      	<span class="item_price"><?php echo $row['supplier']; ?></span>
+                      	<span class="item_price"><?php echo $row1['supplier']; ?></span>
                      </p>
                      <div class="rating1">
                         <ul class="stars">
@@ -180,13 +180,13 @@
                      <div class="occasional">
                         <h5>Types :</h5>
                         <div class="colr ert">
-                           <label class="radio"><input type="radio" name="radio" checked=""><i></i> <?php echo $row['product_name']; ?> (Black)</label>
+                           <label class="radio"><input type="radio" name="radio" checked=""><i></i> <?php echo $row1['product_name']; ?> (Black)</label>
                         </div>
                         <div class="colr">
-                           <label class="radio"><input type="radio" name="radio"><i></i><?php echo $row['product_name']; ?> (Brown)</label>
+                           <label class="radio"><input type="radio" name="radio"><i></i><?php echo $row1['product_name']; ?> (Brown)</label>
                         </div>
                         <div class="colr">
-                           <label class="radio"><input type="radio" name="radio"><i></i><?php echo $row['product_name']; ?> (Pink)</label>
+                           <label class="radio"><input type="radio" name="radio"><i></i><?php echo $row1['product_name']; ?> (Pink)</label>
                         </div>
                         <div class="clearfix"> </div>
                      </div>
@@ -229,7 +229,7 @@
 				 <h3>Description</h3>
                                  <h6>Lorem ipsum dolor sit amet</h6>
                                  <p>
-					<?php echo $row['description']; ?>
+					<?php echo $row1['description']; ?>
                                  </p> 
                               </div>
                           </div>
