@@ -220,6 +220,14 @@
                      </ul>
                   </div>
                   <div class="clearfix"> </div>
+		  <div class="toys single-item singlepage">
+		     <form action="cart.php" method="post">
+			  <input type="hidden" name="id" value="<?php echo $row1['product_id'] ?>">
+			  <label style="font-family: sans-serif; font-size: 18px; color:#EF7F9B;">Quantity:   </label>
+			  <input type="number" name="quantity" min="1" readonly="">
+                     	  <button type="submit" class="toys-cart ptoys-cart add">Add to Cart</button>
+      		      </form>
+                  </div>
                   <!--/tabs-->
 		  <div class="responsive_tabs">
                      <div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
