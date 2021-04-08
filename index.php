@@ -1,7 +1,7 @@
 <?php 
 	include('connect.php');
 	$sql = "SELECT * FROM category";
-	$row = pg_fetch_array(pg_query($conn,$sql));
+	$query = pg_query($conn,$sql);
  ?>
 <!DOCTYPE html>
 <html lang="zxx">
@@ -97,7 +97,7 @@
                         </a>
 			
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-			   <?php while($row){ ?>
+			   <?php while($row = pg_fetch_array($query)){ ?>
 				<a class="nav-link" href="product.php"><?php echo $row['cat_name']; ?></a> 
 			   <?php } ?>
                         </div>
