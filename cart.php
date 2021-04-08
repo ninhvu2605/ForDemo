@@ -5,8 +5,6 @@
       unset($_SESSION['cart'][$_GET['del']]);
       header('location:cart.php');
    }
-   $totalAmount = 0;
-   $amountNew = null;
    if(isset($_POST['id'])){
      $id = $_REQUEST['id'];
      $q = pg_query($conn, "SELECT * FROM product WHERE product_id = $id");
@@ -215,7 +213,10 @@
         </tbody>
       </table>
 </div>
-<?php $_SESSION['total_amount'] = number_format($total,2); ?>
+<?php 
+   $_SESSION['total_amount'] = $totalAmount; 
+   var_dump($_SESSION['total_amount']);
+?>
 
 
 
