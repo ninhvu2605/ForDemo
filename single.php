@@ -145,7 +145,7 @@
                	<?php  
 		       $id = $_GET['id'];
 		       $sql1 = "SELECT * FROM product WHERE product_id = $id";
-		       $query1 = pg_query($conn,$sql);
+		       $query1 = pg_query($conn,$sql1);
 		       if($row1 = pg_fetch_array($query1)){ 
 		?>
                   <div class="col-lg-4 single-right-left ">
