@@ -1,9 +1,7 @@
 <?php 
 ob_start(); // fix header();
-session_start();
 include('connect.php');
 
-$_SESSION['purchased'] = 0;
 var_dump($_SESSION['total_ammount']);
 var_dump($_SESSION['cart']);
 
