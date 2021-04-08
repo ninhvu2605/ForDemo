@@ -5,6 +5,13 @@
       unset($_SESSION['cart'][$_GET['del']]);
       header('location:cart.php');
    }
+   if($_SERVER['REQUEST_METHOD'] == 'POST'){
+     $id = $_REQUEST['product_id'];
+     $q = pg_query($conn, "SELECT * FROM product WHERE product_id = $id");
+     $product = pg_fetch_array($q);
+     $_SESSION['cart'][$id] = $product;
+     $_SESSION['cart'][$id]['quantity']++; 
+   }
  ?>
 <!DOCTYPE html>
 <html lang="zxx">
