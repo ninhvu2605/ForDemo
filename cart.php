@@ -1,4 +1,5 @@
 <?php 
+   session_start();
    include('connect.php');
    if(isset($_GET['del'])){
    unset($_SESSION['cart'][$_GET['del']]);
@@ -168,7 +169,7 @@
         <tbody>
          <?php 
 
-             if (isset($_SESSION['cart']) && $_SESSION['cart'] != null) {
+            if(isset($_SESSION['cart']) && $_SESSION['cart'] != null) {
                
                   foreach($_SESSION['cart'] as $item){
                      
@@ -185,7 +186,7 @@
 
           <?php 
                
-               }
+            }
           }else if(!isset($_SESSION['cart'])){
                echo "<div class='cart-empty'><h1>Cart is empty</h1></div>";
             }     
@@ -206,7 +207,7 @@
 
                   $totalAmount = number_format($total,2);
                ?>
-               <?php echo $totalAmount ?>             
+               <?php echo $totalAmount ?> $          
             </td>
                 <?php if ($totalAmount > 0){ ?>
                <td><a href="<?php echo "order.php" ?>"><i style="padding: 10px;" class="far fa-credit-card"></i>Order Now</a></td>
