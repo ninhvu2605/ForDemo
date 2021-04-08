@@ -20,7 +20,6 @@ if(isset($_POST['check-out'])){
 	if($row = pg_fetch_row($query)){
 
 		$orderID = $row[0];
-		var_dump($orderID);
 		
 		foreach ($_SESSION['cart'] as $item) {
 
