@@ -157,7 +157,12 @@
                         $searchkey = $_GET['searchkey'];
                         $sql = "SELECT * FROM product WHERE product_name LIKE '%$searchkey%' OR cat_name LIKE '%$searchkey%'";
                         $query = pg_query($conn,$sql);
-                        while ($row = pg_fetch_array($query)){
+                        $c = pg_num_rows($query);
+                        if($c = 0){
+                           echo "<h3>Oops! There is no product like that.</h3>";
+                        }
+                        else{
+                           while ($row = pg_fetch_array($query)){
                       ?>
                      <div class="col-lg-4 col-md-6 col-sm-6 product-men women_two">
                         <div class="product-toys-info">
@@ -221,7 +226,8 @@
                      </div>
                      <?php 
                         }
-                      ?>
+                      }  
+                     ?>
       </section>
       <!--//subscribe-address-->
       <section class="sub-below-address py-lg-4 py-md-3 py-sm-3 py-3">
