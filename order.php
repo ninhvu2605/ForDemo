@@ -5,26 +5,17 @@ include('connect.php');
 
 $_SESSION['purchased'] = 0;
 
-
 if(isset($_POST['check-out'])){
 	$name = $_POST['name'];
 	$address = $_POST['address'];
 	$phone = $_POST['phone'];
 	$total_amount = $_SESSION['total_amount'];
 	$pay = $_POST['pay'];
-	$time = current_timestamp();
+	$time = time();
 	
-	$sql = "INSERT INTO order(customer_name, customer_address, total_price, date_modified, customer_phone, pay) VALUES('$name', '$address', '$total_amount', '$time', '$phone', '$pay') RETURNING orderid";
-	$query = mysqli_query($conn, $sql);
+	$sql = "INSERT INTO public.'order' (customer_name, customer_address, total_price, date_modified, customer_phone, pay) VALUES('$name', '$address', '$total_amount', '$time', '$phone', '$pay') returning orderid";
+// 	$query = mysqli_query($conn, $sql);
 	
-// 	if($query){
-// 		echo "Oke!";
-// 	}
-// 	else{
-// 		$res1 = pg_get_result($query);
-// 		echo pg_result_error($res1);
-// 	}	
-
 // 	$query = pg_query($conn, $sql);
 // 	if($row = pg_fetch_row($query)){
 
@@ -54,7 +45,7 @@ if(isset($_POST['check-out'])){
 // 		echo "Loiiiixxxxxxxxxxxxxxxxxxxxxxx";
 // 	}	
 	
-// }
+}
 
 
 ob_flush();
@@ -247,11 +238,11 @@ ob_flush();
 		    </tr>
 		    <tr>
 		      <td align="right">Address :</td>
-		      <td align="left"><input type="text" name="address" value="<?= $row['address'] ?>"></td>
+		      <td align="left"><input type="text" name="address" value=""></td>
 		    </tr>
 		    <tr>
 		      <td align="right">Phone :</td>
-		      <td align="left"><input type="text" name="phone" value="<?= $row['phone'] ?>"></td>
+		      <td align="left"><input type="text" name="phone" value=""></td>
 		    </tr>
 		    <tr>
 		      <td align="right">Total Amount ($) :</td>
