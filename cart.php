@@ -5,8 +5,9 @@
    unset($_SESSION['cart'][$_GET['del']]);
    header('location:cart.php');
    }
-
-   if($_SERVER['REQUEST_METHOD'] == 'POST') {
+   $totalAmount = 0;
+   $amountNew = null;
+   if($_SERVER['REQUEST_METHOD'] == 'POST'){
      $id = $_REQUEST['product_id'];
      $q = pg_query($conn, "SELECT * FROM product WHERE product_id = $id");
      $product = pg_fetch_array($q);
@@ -152,72 +153,6 @@
       <!--show Now-->  
       <!--show Now-->  
      <!-- CARTTTTTTTTTTTTTTTTTTTTTTTTTTTTT -->
-       <div class="row">
-   
-        
-        <table style="color:#FF0094; background: #343A40; border-color: black;" class="table table-dark">
-        <thead>
-          <tr>
-            <th scope="col">Image</th>
-            <th scope="col">Name</th>
-            <th scope="col">Category</th>
-            <th scope="col">Supplier</th>
-            <th scope="col">Price</th>
-            <th scope="col">Action</th>
-          </tr>
-        </thead>
-        <tbody>
-         <?php 
-
-            if(isset($_SESSION['cart']) && $_SESSION['cart'] != null) {
-               
-                  foreach($_SESSION['cart'] as $item){
-                     
-          ?>
-          <tr>
-            <td><img style="width: 100px; height: 100px;" src="images/<?= $item['image'] ?>"></td>
-            <td><?= $item['product_name'] ?></td>
-            <td><?= $item['cat_name'] ?></td>
-            <td><?= $item['supplier'] ?> $</td>
-            <td><?= $item['price'] ?> $</td>
-            <td style="text-align: center;"><a href="cart.php?del=<?= $item['product_id'] ?>"><span style="font-size: 20px;"><i style="color:#FF0094 ; " class="far fa-trash-alt"></i></span></a>
-            </td>
-          </tr>
-
-          <?php 
-               
-            }
-          }else if(!isset($_SESSION['cart'])){
-               echo "<div class='cart-empty'><h1>Cart is empty</h1></div>";
-            }     
-            
-                  
-        
-            ?>
-            
-            <td style="font-size: 20px;" colspan="5"><a href="index.php" style="margin-right: 40%;">Buy More Toys!</a><strong>Total</strong></td>
-            <td style="font-size: 20px;">
-               <?php 
-                  $total = 0;
-                if(isset($_SESSION['cart'])&& $_SESSION['cart'] != null){
-                      foreach ($_SESSION['cart'] as $item) {
-                        $total = $total + ($item['quantity'] * $item['price']);
-                      }
-                  }
-
-                  $totalAmount = number_format($total,2);
-               ?>
-               <?php echo $totalAmount ?> $          
-            </td>
-                <?php if ($totalAmount > 0){ ?>
-               <td><a href="<?php echo "order.php" ?>"><i style="padding: 10px;" class="far fa-credit-card"></i>Order Now</a></td>
-               <?php }else{ ?>
-                  <td><a href="index.php"><i style="padding: 10px;" class="fas fa-cart-plus"></i>Buy Something!</a></td>
-              <?php }  ?>  
-          </tr>
-        </tbody>
-      </table>
-</div>
 
 
 
