@@ -173,7 +173,7 @@
                         <div class="product-toys-info">
                            <div class="men-pro-item">
                               <div class="men-thumb-item">
-                                 <img src="images/<?php echo $row['image']; ?>" class="img-thumbnail img-fluid" alt="">
+                                 <img style="width: 206px; height: 246px" src="images/<?php echo $row['image']; ?>" class="img-thumbnail img-fluid" alt="">
                                  <div class="men-cart-pro">
                                     <div class="inner-men-cart-pro">
                                        <a href="single.php?id=<?php echo $row['product_id']; ?>" class="link-product-add-cart">Quick View</a>
