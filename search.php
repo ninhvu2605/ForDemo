@@ -106,7 +106,7 @@
                               $query = pg_query($conn,$sql);
                               while($row = pg_fetch_array($query)){ 
                            ?>
-                           <a class="nav-link" href="product.php"><?php echo $row['cat_name']; ?></a> 
+                           <a class="nav-link" href="search.php?searchkey=<?php echo $row['cat_name']; ?>"><?php echo $row['cat_name']; ?></a> 
                            <?php } ?>
                         </div>
                      </li>
@@ -155,7 +155,7 @@
                   <div class="row">
                      <?php 
                         $searchkey = $_GET['searchkey'];
-                        $sql = "SELECT * FROM product WHERE product_name LIKE '%$searchkey%'";
+                        $sql = "SELECT * FROM product WHERE product_name LIKE '%$searchkey%' OR cat_name LIKE '%$searchkey%";
                         $query = pg_query($conn,$sql);
                         while ($row = pg_fetch_array($query)){
                       ?>
