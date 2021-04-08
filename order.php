@@ -14,38 +14,47 @@ if(isset($_POST['check-out'])){
 	$pay = $_POST['pay'];
 	$time = current_timestamp();
 	
-	$sql = "INSERT INTO order(customer_name, customer_address, total_price, date_modified, customer_phone, pay) VALUES('$name', '$address', $total_amount, '$time', '$phone', '$pay') RETURNING orderid";
-
-	$query = pg_query($conn, $sql);
-	if($row = pg_fetch_row($query)){
-
-		$orderID = $row[0];
-		var_dump($orderID);
-		
-		foreach ($_SESSION['cart'] as $item) {
-
-			$productID = $item['product_id']; 
-
-			$image = $item['image'];
-
-			$quantity = $item['quantity'];
-
-			$price = $item['price'];
-
-			$sql = "INSERT INTO order_detail VALUES ($orderID, $productID,'$quantity','$price', '$image')";
-
-			$ins =pg_query($conn,$sql);
-		}
-		
-
-		$_SESSION['purchased']=1;
-		header('location:index.php');
+	$sql = "INSERT INTO order(customer_name, customer_address, total_price, date_modified, customer_phone, pay) VALUES('$name', '$address', '$total_amount', '$time', '$phone', '$pay') RETURNING orderid";
+	$query = mysqli_query($conn, $sql);
+	
+	if($query){
+		echo "Oke!";
 	}
 	else{
-		echo "Loiiiixxxxxxxxxxxxxxxxxxxxxxx";
+		$res1 = pg_get_result($query);
+		echo pg_result_error($res1);
 	}	
+
+// 	$query = pg_query($conn, $sql);
+// 	if($row = pg_fetch_row($query)){
+
+// 		$orderID = $row[0];
+// 		var_dump($orderID);
+		
+// 		foreach ($_SESSION['cart'] as $item) {
+
+// 			$productID = $item['product_id']; 
+
+// 			$image = $item['image'];
+
+// 			$quantity = $item['quantity'];
+
+// 			$price = $item['price'];
+
+// 			$sql = "INSERT INTO order_detail VALUES ($orderID, $productID,'$quantity','$price', '$image')";
+
+// 			$ins =pg_query($conn,$sql);
+// 		}
+		
+
+// 		$_SESSION['purchased']=1;
+// 		header('location:index.php');
+// 	}
+// 	else{
+// 		echo "Loiiiixxxxxxxxxxxxxxxxxxxxxxx";
+// 	}	
 	
-}
+// }
 
 
 ob_flush();
