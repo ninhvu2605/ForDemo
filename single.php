@@ -230,16 +230,16 @@
                   </div>
                   <div class="clearfix"> </div>
                   <!--/tabs-->
-                  <div class="responsive_tabs">
-                     <div id="horizontalTab">
+<div class="responsive_tabs">
+                     <div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
                         <ul class="resp-tabs-list">
-                           <li>Description</li>
-                           <li>Reviews</li>
-                           <li>Information</li>
+                           <li class="resp-tab-item resp-tab-active" aria-controls="tab_item-0" role="tab">Description</li>
+                           <li class="resp-tab-item" aria-controls="tab_item-1" role="tab">Reviews</li>
+                           <li class="resp-tab-item" aria-controls="tab_item-2" role="tab">Information</li>
                         </ul>
                         <div class="resp-tabs-container">
                            <!--/tab_one-->
-                           <div class="tab1">
+                           <h2 class="resp-accordion resp-tab-active" role="tab" aria-controls="tab_item-0"><span class="resp-arrow"></span>Description</h2><div class="tab1 resp-tab-content resp-tab-content-active" style="display:block" aria-labelledby="tab_item-0">
                               <div class="single_page">
                                  <h6>Lorem ipsum dolor sit amet</h6>
                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elPellentesque vehicula augue eget nisl ullamcorper, molestie
@@ -255,7 +255,7 @@
                               </div>
                            </div>
                            <!--//tab_one-->
-                           <div class="tab2">
+                           <h2 class="resp-accordion" role="tab" aria-controls="tab_item-1"><span class="resp-arrow"></span>Reviews</h2><div class="tab2 resp-tab-content" aria-labelledby="tab_item-1">
                               <div class="single_page">
                                  <div class="bootstrap-tab-text-grids">
                                     <div class="bootstrap-tab-text-grid">
@@ -292,7 +292,7 @@
                                  </div>
                               </div>
                            </div>
-                           <div class="tab3">
+                           <h2 class="resp-accordion" role="tab" aria-controls="tab_item-2"><span class="resp-arrow"></span>Information</h2><div class="tab3 resp-tab-content" aria-labelledby="tab_item-2">
                               <div class="single_page">
                                  <h6>Teddy Bear(Blue)</h6>
                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elPellentesque vehicula augue eget nisl ullamcorper, molestie
