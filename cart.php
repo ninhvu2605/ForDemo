@@ -5,6 +5,8 @@
       unset($_SESSION['cart'][$_GET['del']]);
       header('location:cart.php');
    }
+   $totalAmount = 0;
+   $amountNew = null;
    if(isset($_POST['id'])){
      $id = $_REQUEST['id'];
      $q = pg_query($conn, "SELECT * FROM product WHERE product_id = $id");
