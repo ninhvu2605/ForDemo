@@ -210,7 +210,11 @@
                                        </ul>
                                     </div>
 				    <div class="toys single-item hvr-outline-out">
-                                          <button type="submit" class="toys-cart ptoys-cart"><i class="fas fa-cart-plus"></i></button>
+					   <form action="singe.php?id=<?php echo $row['product_id']; ?>" method="post" class="last">
+					      <button class="top_toys_cart" type="submit" name="submit">
+					      <span class="fas fa-cart-arrow-down"></span>
+					      </button>
+					   </form>
                                    </div>
                                    </div>
                                  <div class="clearfix"></div>
