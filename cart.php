@@ -5,8 +5,8 @@
       unset($_SESSION['cart'][$_GET['del']]);
       header('location:cart.php');
    }
-   if($_SERVER['REQUEST_METHOD'] == 'POST'){
-     $id = $_REQUEST['product_id'];
+   if(isset($_POST['id'])){
+     $id = $_REQUEST['id'];
      $q = pg_query($conn, "SELECT * FROM product WHERE product_id = $id");
      $product = pg_fetch_array($q);
      $_SESSION['cart'][$id] = $product;
