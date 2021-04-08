@@ -145,9 +145,15 @@
                <div class="side-bar col-lg-3">
                   <div class="search-hotel">
                      <h3 class="agileits-sear-head">Search Here..</h3>
-                     <form action="#" method="post">
-                        <input type="search" placeholder="Product name..." name="search" required="">
-                        <input name = "search" type="submit" value=" ">
+                     <?php 
+                        if(isset($_POST['search_lt'])){
+                           $sx = $_POST['search_it']; 
+                           header("Location:search.php?searchkey=$sx");
+                        }   
+                     ?>
+                     <form method="post">
+                        <input type="search" placeholder="Product name..." name="search_it" required="">
+                        <input name = "search_lt" type="submit" value=" ">
                      </form>
                   </div>   
                </div>
