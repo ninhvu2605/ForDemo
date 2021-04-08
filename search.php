@@ -155,7 +155,7 @@
                   <div class="row">
                      <?php 
                         $searchkey = $_GET['searchkey'];
-                        $sql = "SELECT * FROM product WHERE product_name LIKE '%$searchkey%' OR cat_name LIKE '%$searchkey%' OR supplier LIKE '%searchkey%'";
+                        $sql = "SELECT * FROM product WHERE product_name LIKE '%$searchkey%' OR cat_name LIKE '%$searchkey%' OR supplier LIKE '%$searchkey%'";
                         $query = pg_query($conn,$sql);
                         $c = pg_num_rows($query);
                         if($c = 0){
