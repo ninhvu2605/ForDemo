@@ -224,8 +224,10 @@
 		     <form action="cart.php" method="post">
 			  <input type="hidden" name="id" value="<?php echo $row1['product_id'] ?>">
 			  <label style="font-family: sans-serif; font-size: 18px; color:#EF7F9B;">Quantity:   </label>
-			  <input type="number" name="quantity" min="1" readonly="">
-                     	  <button type="submit" class="toys-cart ptoys-cart add">Add to Cart</button>
+			  <input type="number" name="quantity" min="1">
+                     	  <button class="top_toys_cart" type="submit" name="submit" value="">
+                              <span class="fas fa-cart-arrow-down"></span>
+                          </button>
       		      </form>
                   </div>
                   <!--/tabs-->
