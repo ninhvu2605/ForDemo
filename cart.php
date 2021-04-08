@@ -1,5 +1,10 @@
 <?php 
-
+   session_start();
+   include('connect.php');
+   if(isset($_GET['del'])){
+      unset($_SESSION['cart'][$_GET['del']]);
+      header('location:cart.php');
+   }
  ?>
 <!DOCTYPE html>
 <html lang="zxx">
