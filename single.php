@@ -234,8 +234,6 @@
                      <div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
                         <ul class="resp-tabs-list">
                            <li class="resp-tab-item resp-tab-active" aria-controls="tab_item-0" role="tab">Description</li>
-                           <li class="resp-tab-item" aria-controls="tab_item-1" role="tab">Reviews</li>
-                           <li class="resp-tab-item" aria-controls="tab_item-2" role="tab">Information</li>
                         </ul>
                         <div class="resp-tabs-container">
                            <!--/tab_one-->
