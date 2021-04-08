@@ -98,7 +98,7 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 			   <?php 
-				$query1 = pg_query($conn,"SELECT * FROM CATEGORY");
+				$query1 = pg_query($conn,"SELECT * FROM category");
 				while($row1 = pg_fetch_array($query)){
 				   echo "<a class='nav-link' href='product.html'>".$row1['cat_name']."</a>";
 				}
