@@ -230,7 +230,7 @@
                   </div>
                   <div class="clearfix"> </div>
                   <!--/tabs-->
-<div class="responsive_tabs">
+		  <div class="responsive_tabs">
                      <div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
                         <ul class="resp-tabs-list">
                            <li class="resp-tab-item resp-tab-active" aria-controls="tab_item-0" role="tab">Description</li>
@@ -253,64 +253,8 @@
                                     magna aliqua.
                                  </p>
                               </div>
-                           </div>
-                           <!--//tab_one-->
-                           <h2 class="resp-accordion" role="tab" aria-controls="tab_item-1"><span class="resp-arrow"></span>Reviews</h2><div class="tab2 resp-tab-content" aria-labelledby="tab_item-1">
-                              <div class="single_page">
-                                 <div class="bootstrap-tab-text-grids">
-                                    <div class="bootstrap-tab-text-grid">
-                                       <div class="bootstrap-tab-text-grid-left">
-                                          <img src="images/team1.jpg" alt=" " class="img-fluid">
-                                       </div>
-                                       <div class="bootstrap-tab-text-grid-right">
-                                          <ul>
-                                             <li><a href="#">Admin</a></li>
-                                             <li><a href="#"><i class="fa fa-reply-all" aria-hidden="true"></i> Reply</a></li>
-                                          </ul>
-                                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elPellentesque vehicula augue eget.Ut enim ad minima veniam,
-                                             quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis
-                                             autem vel eum iure reprehenderit.
-                                          </p>
-                                       </div>
-                                       <div class="clearfix"> </div>
-                                    </div>
-                                    <div class="add-review">
-                                       <h4>add a review</h4>
-                                       <form action="#" method="post">
-                                          <div class="row">
-                                             <div class="col-md-6">
-                                                <input type="text" name="Name" required="">
-                                             </div>
-                                             <div class="col-md-6">
-                                                <input type="email" name="Email" required="">
-                                             </div>
-                                          </div>
-                                          <textarea name="Message" required=""></textarea>
-                                          <input type="submit" value="SEND">
-                                       </form>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <h2 class="resp-accordion" role="tab" aria-controls="tab_item-2"><span class="resp-arrow"></span>Information</h2><div class="tab3 resp-tab-content" aria-labelledby="tab_item-2">
-                              <div class="single_page">
-                                 <h6>Teddy Bear(Blue)</h6>
-                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elPellentesque vehicula augue eget nisl ullamcorper, molestie
-                                    blandit ipsum auctor. Mauris volutpat augue dolor.Consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                                    ut lab ore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. labore et dolore
-                                    magna aliqua.
-                                 </p>
-                                 <p class="para">Lorem ipsum dolor sit amet, consectetur adipisicing elPellentesque vehicula augue eget nisl ullamcorper, molestie
-                                    blandit ipsum auctor. Mauris volutpat augue dolor.Consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                                    ut lab ore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. labore et dolore
-                                    magna aliqua.
-                                 </p>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <!--//tabs-->
+                          </div>
+                   <!--//tabs-->
                  <?php } ?>
                </div>
             </div>
