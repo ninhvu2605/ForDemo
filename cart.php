@@ -208,13 +208,9 @@
 
                   $totalAmount = number_format($total,2);
                ?>
-               <?php echo $totalAmount ?>             
-            </td>
-                <?php if ($totalAmount > 0){ ?>
+               <?php echo $totalAmount ?> $             
+           </td>   
                <td><a href="<?php echo "order.php" ?>"><i style="padding: 10px;" class="far fa-credit-card"></i>Order Now</a></td>
-               <?php }else{ ?>
-                  <td><a href="index.php"><i style="padding: 10px;" class="fas fa-cart-plus"></i>Buy Something!</a></td>
-              <?php }  ?>  
           </tr>
         </tbody>
       </table>
