@@ -37,10 +37,10 @@ if(isset($_POST['check-out'])){
 
 // 		$_SESSION['purchased']=1;
 // 		header('location:index.php');
-	}
-	else{
-		echo "Loiiiixxxxxxxxxxxxxxxxxxxxxxx";
-	}	
+// 	}
+// 	else{
+// 		echo "Loiiiixxxxxxxxxxxxxxxxxxxxxxx";
+// 	}	
 	
 }
 
