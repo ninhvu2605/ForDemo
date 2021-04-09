@@ -10,7 +10,7 @@ if(isset($_POST['check-out'])){
 	$pay = $_POST['pay'];
 	$time = time();
 	
-        $sql = "INSERT INTO order(customer_name, customer_address, total_price, date_modified, customer_phone, pay) VALUES('$name', '$address', '$total_amount', '$time', '$phone', '$pay')"; 
+        $sql = "INSERT INTO orders (customer_name, customer_address, total_price, date_modified, customer_phone, pay) VALUES('cxzc', 'zxc', 'cxz', 'cxz', 'cxz', 'cxz') RETURNING orderid"; 
 
 	$query = pg_query($conn, $sql);
 	if($query){
