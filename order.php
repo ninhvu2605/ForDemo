@@ -15,6 +15,9 @@ if(isset($_POST['check-out'])){
         $sql = "INSERT INTO order(customer_name, customer_address, total_price, date_modified, customer_phone, pay) VALUES('$name', '$address', '$total_amount', '$time', '$phone', '$pay')"; 
 
 	$query = pg_query($conn, $sql);
+	if($query){
+		echo "OKKK";
+	}
 // 	if($row = pg_fetch_row($query)){
 
 // 		$orderID = $row[0];
