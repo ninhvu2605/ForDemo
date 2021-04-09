@@ -8,9 +8,9 @@ if(isset($_POST['check-out'])){
 	$phone = $_POST['phone'];
 	$total_amount = $_SESSION['total_amount'];
 	$pay = $_POST['pay'];
-	$time = time();
+	$time = date(h:m:s);
 	
-        $sql = "INSERT INTO orders (customer_name, customer_address, total_price, date_modified, customer_phone, pay) VALUES('cxzc', 'zxc', 'cxz', 'cxz', 'cxz', 'cxz') RETURNING orderid"; 
+        $sql = "INSERT INTO orders (customer_name, customer_address, total_price, date_modified, customer_phone, pay) VALUES('$name', '$address', '$total_amount', '$time', '$phone', '$pay') RETURNING orderid"; 
 
 	$query = pg_query($conn, $sql);
 	if($row = pg_fetch_row($query)){
