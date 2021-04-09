@@ -2,16 +2,16 @@
 ob_start(); // fix header();
 session_start();
 include('connect.php');
+date_default_timezone_set('Asia/Ho_Chi_Minh');
 if(isset($_POST['check-out'])){
 	$name = $_POST['name'];
 	$address = $_POST['address'];
 	$phone = $_POST['phone'];
 	$total_amount = $_SESSION['total_amount'];
 	$pay = $_POST['pay'];
-	date_default_timezone_set('Asia/Ho_Chi_Minh');
 	$time = date("h:i:sa");
 	
-        $sql = "INSERT INTO orders (customer_name, customer_address, total_price, date_modified, customer_phone, pay) VALUES('$name', '$address', '$total_amount', '$time', '$phone', '$pay') RETURNING orderid"; 
+        $sql = "INSERT INTO orders (customer_name, customer_address, total_price, date_modified, customer_phone, pay) VALUES('$name', '$address', $total_amount, '$time', '$phone', '$pay') RETURNING orderid"; 
 
 	$query = pg_query($conn, $sql);
 	if($row = pg_fetch_row($query)){
@@ -34,7 +34,7 @@ if(isset($_POST['check-out'])){
 		}
 		
 
-		$_SESSION['purchased']=1;
+		
 		header('location:index.php');
 	}
 	else{
