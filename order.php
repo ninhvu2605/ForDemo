@@ -2,7 +2,8 @@
 ob_start(); // fix header();
 session_start();
 include('connect.php');
-
+$t = time();
+var_dump($t);
 if(isset($_POST['check-out'])){
 	$name = $_POST['name'];
 	$address = $_POST['address'];
