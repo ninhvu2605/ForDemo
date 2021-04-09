@@ -8,7 +8,8 @@ if(isset($_POST['check-out'])){
 	$phone = $_POST['phone'];
 	$total_amount = $_SESSION['total_amount'];
 	$pay = $_POST['pay'];
-	$time = date(h:m:s);
+	date_default_timezone_set('Asia/Ho_Chi_Minh');
+	$time = date("h:i:sa");
 	
         $sql = "INSERT INTO orders (customer_name, customer_address, total_price, date_modified, customer_phone, pay) VALUES('$name', '$address', '$total_amount', '$time', '$phone', '$pay') RETURNING orderid"; 
 
